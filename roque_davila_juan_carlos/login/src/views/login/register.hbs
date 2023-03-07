@@ -1,0 +1,54 @@
+<html>
+<title>Registro</title>
+
+    <center>
+    <body>
+    <br>
+    <br>
+    <br>
+    <h2>
+    <b>
+    <sub>Registro</sub>
+    </b>
+    </h2>
+
+    <br>
+    <P><b>Apellidos: </b><input thayptype="text" name="apellidos"/ placeholder="Obligatorio*"></P>
+    <br>
+    <P><b>Nombre(s): </b><input thayptype="text" name="nombre"/ placeholder="Obligatorio*"></P>
+    <br>
+    <P><b>Email: </b><input thayptype="email" name="email"/ placeholder="Obligatorio*"></P>
+    <br>
+    <P><b>Fecha de nacimiento: </b><input type="date" name="fecha-de-nacimiento"/></P>
+    <br>
+    <script type="text/javascript">
+        function mostrarPassword(){
+                var cambio = document.getElementById("txtPassword");
+                if(cambio.type == "password"){
+                    cambio.type = "text";
+                    $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+                }else{
+                    cambio.type = "password";
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                }
+                } 
+    
+                $(document).ready(function () {
+                //CheckBox mostrar contraseña
+                $('#ShowPassword').click(function () {
+                    $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+                });
+            });
+            </script>
+            <p>
+            <label><b>Contraseña:</b></label><input ID="txtPassword" type="Password" Class="form-control" placeholder=" Obligatorio*" div class="input-group-append"><button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+            </p>
+            </div>
+    <br>
+    <P><b>Numero de telefono: </b><input type="telefono" name="numero-de-telefono"/ placeholder="+52"></P>
+    <br>
+    <button>Registrarse</button>
+
+    </body>
+    </center>
+</html>
